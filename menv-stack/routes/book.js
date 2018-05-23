@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Book = require('../models/Book.js');
 
 /* GET ALL BOOKS */
+// route displays list of all boks found in MongoDB
 router.get('/', function(req, res, next) {
   Book.find(function (err, products) {
     if (err) return next(err);

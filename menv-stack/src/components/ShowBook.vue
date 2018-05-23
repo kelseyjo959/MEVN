@@ -45,6 +45,9 @@ export default {
       this.errors.push(e)
     })
   },
+  // if 'edit' button clicked
+  // GET request url = /edit-book/book_.id
+  // view is updated to EditBook.vue
   methods: {
     editbook (bookid) {
       this.$router.push({
@@ -52,6 +55,9 @@ export default {
         params: { id: bookid }
       })
     },
+    // if 'delete' button clicked
+    // ajax/axios delete request 
+    // once removed, the route pushes the changes need to be displayed on BookList.vue
     deletebook (bookid) {
       axios.delete('http://localhost:3000/book/' + bookid)
       .then((result) => {

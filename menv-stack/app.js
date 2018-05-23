@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var book = require('./routes/book');
 var app = express();
+var uploader = require('./routes/uploader');
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -17,8 +18,10 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/books', express.static(path.join(__dirname, 'dist')));
 app.use('/book', book);
+app.use('/uploader', uploader);
 
 app.set('view engine', 'html');
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -43,6 +43,10 @@ export default {
       this.errors.push(e)
     })
   },
+  // when the 'details' button is clicked, url = /show-book/book._id
+  // GET request is made to /book/book._id
+  // express route...('/:id'), calls to Mongoose to find One book
+  // view changes to ShowBook.vue
   methods: {
     details (book) {
       this.$router.push({
