@@ -15,12 +15,13 @@
 
 // module.exports = router;
 
-module.exports = (function() {
-    'use strict';
-    var uploader = require('express').Router();
-    
-    uploader.get('/uploader', function(req, res) {
-        res.send('Hello uploader');
-    });
-    return uploader;
-})();
+// module.exports = (function() {
+//     'use strict';
+//     var uploader = require('express').Router();
+//     
+//     uploader.get('/uploader', function(req, res) {
+//         res.send('Hello uploader');
+//         console.log(res);
+//     });
+//     return uploader;
+// })();

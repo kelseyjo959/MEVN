@@ -6,6 +6,7 @@ import ShowBook from '@/components/ShowBook'
 import CreateBook from '@/components/CreateBook'
 import EditBook from '@/components/EditBook'
 import Uploader from '@/components/Uploader'
+import Test from '@/components/Test'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
     path: '/uploader',
     name: 'Uploader',
     component: Uploader
+  }, 
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   }
   ]
 })
